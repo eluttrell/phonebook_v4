@@ -1,0 +1,20 @@
+{% extends "layout.html" %} {% block body %}
+<form class="" action="/submit_new_student" method="post">
+    <input type="hidden" name="id" value="{{student.id}}">
+    <p>
+        <label for="name">Name</label><br>
+        <input type="text" name="name" value="">
+    </p>
+    <p>
+        <label for="website">Website</label><br>
+        <input type="text" size="60" name="website" value="">
+    </p>
+    <p>
+        <label for="github_username">Github Username</label><br>
+        <input type="text" size="60" name="github_username" value="">
+    </p>
+    <p>
+        <button type="submit">Add Student</button>
+    </p>
+</form>
+{% endblock %}

@@ -1,0 +1,73 @@
+body {
+    background-image: url(/static/background.jpg);
+    color: white;
+    text-align: center;
+    font-family: "Courier New";
+}
+
+input {
+    font-size: 2em;
+}
+
+.button {
+    background-color: #303030;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    margin: auto;
+}
+
+.footer-button {
+    background-color: #303030;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    margin: auto;
+}
+
+.button:hover {
+    background: #404040;
+    font-size: 1.1em;
+}
+
+#add_new {
+    margin-top: 10px;
+}
+
+.header {
+    background: #303030;
+    margin: -10px;
+    padding: 1px;
+}
+
+ul {
+    padding: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: block;
+    height: 80px;
+    width: 100%;
+    background: #303030;
+    text-align: center;
+}

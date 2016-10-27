@@ -1,0 +1,25 @@
+{% extends "layout.html" %} {% block body %} {% for entry in entry_list %}
+<div class="header">
+    <h1>{{title}}</h1>
+</div>
+<form class="" action="/edit_entry" method="post">
+    <input type="hidden" name="id" value="{{entry.id}}">
+    <p>
+        <label for="name" placeholder="Name"></label><br>
+        <input type="text" size="25" name="name" value="{{entry.name}}">
+    </p>
+    <p>
+        <label for="phone_number"></label><br>
+        <input type="text" size="25" name="phone_number" value="{{entry.phone_number}}">
+    </p>
+    <p>
+        <label for="email"></label><br>
+        <input type="text" size="25" name="email" value="{{entry.email}}">
+    </p>
+    <p>
+        <button class="button" name="action" value="edit" type="submit">Edit Entry</button>
+        <button class="button" name="action" value="delete" type="submit">Delete Entry</button>
+        <!-- <a class="button" href="/delete_entry?id={{entry.id}}">Delete Entry</a> -->
+    </p>
+</form>
+{% endfor %} {% endblock %}

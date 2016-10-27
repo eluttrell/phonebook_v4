@@ -1,0 +1,41 @@
+{% extends "layout.html" %} {% block head %}
+<style media="screen">
+    body {
+        background-image: url(/static/background.jpg);
+        text-align: center;
+        color: white;
+        font-family: "Courier New"
+    }
+
+    form {
+        margin-top: auto;
+    }
+
+    button {
+        width: 397px;
+    }
+</style> {% endblock %} {% block body %}
+<div id="add_entry">
+    <div class="header">
+        <h1>{{title}}</h1>
+    </div>
+    <form class="" action="/submit_new_entry" method="post">
+        <input type="hidden" name="id" value="">
+        <p>
+            <label for="name" placeholder="Name"></label><br>
+            <input type="text" size="25" name="name" value="" placeholder="Name">
+        </p>
+        <p>
+            <label for="phone_number"></label><br>
+            <input type="text" size="25" name="phone_number" value="" placeholder="Phone Number">
+        </p>
+        <p>
+            <label for="email"></label><br>
+            <input type="text" size="25" name="email" value="" placeholder="Email">
+        </p>
+        <p>
+            <button class="button" type="submit">Add Entry</button>
+        </p>
+    </form>
+</div>
+{% endblock %}

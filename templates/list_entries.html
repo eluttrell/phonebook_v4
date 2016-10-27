@@ -1,0 +1,57 @@
+{% extends "layout.html" %} {% block head %}
+<style media="screen">
+    table,
+    tr,
+    th,
+    td {
+        border: 2px solid black;
+        margin: auto;
+        margin-top: 20px;
+    }
+
+    td,
+    th {
+        padding: 5px;
+    }
+</style> {% endblock %} {% block body %}
+<div id="list_entries">
+    <div class="header">
+        <h1>{{title}}</h1>
+    </div>
+    <br>
+    <table>
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>
+                Phone Number
+            </th>
+            <th>
+                Email
+            </th>
+            <th>
+
+            </th>
+        </tr>
+        {% for entry in entry_list %}
+        <tr>
+            <td>
+                {{entry.name}}
+            </td>
+            <td>
+                {{entry.phone_number}}
+            </td>
+            <td>
+                {{entry.email}}
+            </td>
+            <td style="text-align: right ">
+                <a href="/update_entry?id={{entry.id}} ">Update</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <a id="add_new" class=" button " href="/add_entry ">Add a new entry</a>
+    <br>
+</div> {% endblock %}
